@@ -1,0 +1,3 @@
+game:GetService"RunService".RenderStepped:Connect(function()
+game:GetService("Players").LocalPlayer.Backpack.Stats.InCombat.Value = false
+end)

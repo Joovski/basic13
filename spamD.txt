@@ -1,0 +1,10 @@
+ if _G.Connection and #_G.Connection > 0 then
+    for i,v in pairs(_G.Connection) do
+        v:Disconnect()
+    end
+ end
+ _G.Connection.SteppedConnection = game:GetService("RunService").Stepped:Connect(function()
+game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Tool").Click:FireServer()
+ end)
+ wait(0.25)
+ _G.Connection.SteppedConnection:Disconnect()

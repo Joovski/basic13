@@ -1,0 +1,14 @@
+ if _G.Connection and #_G.Connection > 0 then
+    for i,v in pairs(_G.Connection) do
+        v:Disconnect()
+    end
+ end
+ _G.Connection.SteppedConnection = game:GetService("RunService").Stepped:Connect(function()
+    for i,v in pairs(game.Workspace:GetDescendants()) do
+        if v:IsA("ClickDetector") then
+        fireclickdetector(v)
+        end
+        end
+ end)
+ wait(0.25)
+ _G.Connection.SteppedConnection:Disconnect()
