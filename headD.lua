@@ -15,8 +15,3 @@ end
 end
 end))
 
-game.StarterGui:SetCore("SendNotification", {
-Title = "HitBox Expander"; -- title of notification
-Text = "Stopped"; -- bottom text
-Duration = 5; -- how long notification is on screen
-})
